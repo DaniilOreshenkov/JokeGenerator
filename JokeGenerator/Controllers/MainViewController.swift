@@ -2,7 +2,7 @@ import UIKit
 
 // MARK - DOTO: Сделать через стек
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
     
     //MARK: UI
     
@@ -278,5 +278,5 @@ class ViewController: UIViewController {
 }
 
 #Preview(traits: .portrait) {
-    ViewController()
+    MainViewController()
 }

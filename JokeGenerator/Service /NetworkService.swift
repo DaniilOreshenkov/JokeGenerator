@@ -1,12 +1,6 @@
 import UIKit
 
-enum NetworkError: Error {
-    case httpStatusCode
-    case urlRequestError
-    case noData
-}
-
-struct NetworkService {
+struct NetworkService: NetworkRoutingProtocol {
     func fetch(url: URL, completion: @escaping (Result<Data, NetworkError>) -> Void) {
         let request = URLRequest(url: url)
         

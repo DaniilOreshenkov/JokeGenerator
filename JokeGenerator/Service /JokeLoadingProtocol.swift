@@ -1,5 +1,6 @@
 import Foundation
 
 protocol JokeLoadingProtocol {
-    func fetch(url: URL, completion: Result<JokeGeneral, Error>)
+    var jokeGeneralUrl: URL? { get }
+    func loadJokes(completion: @escaping (Result<JokeGeneral, JokesLoaderError>) -> Void)
 }

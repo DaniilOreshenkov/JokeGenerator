@@ -1,20 +1,14 @@
 import UIKit
 
-enum JokesLoaderError: Error {
-    case invalidURL
-    case networkError(Error)
-    case decodingError(Error)
-    case noData
-}
+struct JokesLoader: JokeLoadingProtocol {
 
-struct JokesLoader {
     private let networkService: NetworkService
     
     init(networkService: NetworkService) {
         self.networkService = networkService
     }
 
-    private var jokeGeneralUrl: URL? {
+    var jokeGeneralUrl: URL? {
         guard let url = URL(string: R.URL.jokeUrl) else {
             print("Unable to construct jokeGeneralUrl")
             return nil
