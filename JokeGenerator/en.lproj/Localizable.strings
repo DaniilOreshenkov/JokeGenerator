@@ -1,0 +1,7 @@
+// MARK: - Text Label
+"jokeIdLabel" = "Joke ID";
+"jokeNumberLabel" = "265";
+"typeLabel" = "Type";
+"generalLabel" = "general";
+"setupLabel" = "Setup";
+"punchlineButton" = "Show punchline";
